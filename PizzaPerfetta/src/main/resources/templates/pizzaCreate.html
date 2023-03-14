@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>Pizza Perfetta | Create</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+    <h1>Pizza Perfetta - pizza create</h1>
+</div>
+<table  class="table table-responsive table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width:  25%"> Pizza photo link</th>
+        <th style="width:  15%"> Name</th>
+        <th style="width:  50%"> Ingredients</th>
+        <th style="width:  10%"> Action</th>
+    </tr>
+    </thead>
+    <tr>
+        <td><input type="text" th:field="*{PizzaPictureLocation}" id="PizzaPhotoLink" class="form-control" required/></td>
+        <td><input type="text" th:field="*{PizzaName}" id="PizzaName" class="form-control" required/></td>
+        <td><input type="text" th:field="*{Ingredients}" id="Ingredients" class="form-control" required/></td>
+        <td><button type="submit" class="btn btn-primary btn-lg btn-block" style="color: white; background-color: green;">Submit</button></td>
+    </tr>
+</table>
+<footer>
+    <div class="text-center bg-dark text-light py-2">
+        <p>&copy; 2023 Pizza Perffetta. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

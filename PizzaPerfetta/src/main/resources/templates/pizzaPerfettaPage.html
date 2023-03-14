@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>Pizza Perfetta | Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+    <h1>Pizza Perfetta menu</h1>
+</div>
+<table  class="table table-responsive table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width:  5%"> ID:</th>
+        <th style="width:  25%"> Photo:</th>
+        <th style="width:  10%"> Name:</th>
+        <th style="width:  50%"> Ingredients:</th>
+        <th style="width:  10%"> Actions:</th>
+    </tr>
+    </thead>
+    <tr th:each="Pizza : ${pizzaList}">
+        <td th:text="${Pizza.id}"></td>
+        <td>
+            <img th:src="${Pizza.PizzaPictureLocation}" width="350px" alt="Can not load photo">
+        </td>
+        <td th:text="${Pizza.name}"></td>
+        <td th:text="${Pizza.ingredients}"></td>
+        <td><a th:href="'/pizzas/' +  ${Pizza.getId()}" class="btn btn-primary btn-lg btn-block" style="color: white; background-color: #6c757d;">Admin</a></td></tr>
+</table>
+<a href="/pizzas/create" class="btn btn-primary btn-lg btn-block" style="color: white; background-color: #DE9B25;">Add pizza to menu</a>
+<br>
+<footer>
+    <div class="text-center bg-dark text-light py-2">
+        <p>&copy; 2023 Pizza Perffetta. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
