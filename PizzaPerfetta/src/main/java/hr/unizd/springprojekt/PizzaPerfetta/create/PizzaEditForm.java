@@ -7,7 +7,7 @@ public class PizzaEditForm {
 
     @NotNull
     private Integer id;
-    @NotEmpty(message = "Pizza must haave name")
+    @NotEmpty(message = "Pizza must have name")
     private String name;
 
     @NotEmpty(message = "Pizza must have at least 1 ingredient")
