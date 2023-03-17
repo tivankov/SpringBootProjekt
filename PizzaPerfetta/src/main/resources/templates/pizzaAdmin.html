@@ -16,7 +16,6 @@
     <thead>
     <tr>
         <th style="width:  5%"> ID</th>
-        <th style="width:  25%"> Photo</th>
         <th style="width:  10%"> Name</th>
         <th style="width:  50%"> Ingredients</th>
         <th style="width:  10%"> Action</th>
@@ -24,9 +23,6 @@
     </thead>
     <tr>
         <td th:text="${pizzaDetails.id}"></td>
-        <td>
-            <img th:src="${pizzaDetails.PizzaPictureLocation}" width="350px" alt="Can not load photo">
-        </td>
         <td th:text="${pizzaDetails.name}"></td>
         <td th:text="${pizzaDetails.ingredients}"></td>
         <td><a th:href="@{/pizzas/edit/{id}(id=${pizzaDetails.id})}" class="btn btn-primary btn-lg btn-block" style="color: white; background-color: #6c757d;">Edit</a>
