@@ -23,11 +23,9 @@
     </tr>
     </thead>
     <tr>
-        <td><input type="text" th:field="*{PizzaPictureLocation}" id="PizzaPhotoLink" class="form-control" required/></td>
-        <td><input type="text" id="pizzaName" class="form-control" required/></td>
-<!--        <td><input type="text" th:field="*{pizzaName}" id="pizzaName" class="form-control" required/></td>-->
-        <td><input type="text" id="ingredients" class="form-control" required/></td>
-<!--        <td><input type="text" th:field="*{ingredients}" id="ingredients" class="form-control" required/></td>-->
+        <td><input type="text" th:field="*{pizzaPictureLocation}" id="PizzaPhotoLink" class="form-control" required/></td>
+        <td><input type="text" id="name" class="form-control" th:field="*{name}" required/></td>
+        <td><input type="text" id="ingredients" th:field="*{ingredients}" class="form-control" required/></td>
         <td><button type="submit" class="btn btn-primary btn-lg btn-block" style="color: white; background-color: green;">Submit</button></td>
     </tr>
 </table>

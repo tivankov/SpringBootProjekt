@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotEmpty;
 
 public class PizzaCreateForm {
     @NotEmpty(message = "Pizza must have picture")
-    private String pizzaPhotoLink;
+    private String pizzaPictureLocation;
     @NotEmpty(message = "Pizza must have name")
     private String name;
 
@@ -15,12 +15,12 @@ public class PizzaCreateForm {
         return name;
     }
 
-    public String getPizzaPhotoLink() {
-        return pizzaPhotoLink;
+    public String getPizzaPictureLocation() {
+        return pizzaPictureLocation;
     }
 
-    public void setPizzaPhotoLink(String pizzaPhotoLink) {
-        this.pizzaPhotoLink = pizzaPhotoLink;
+    public void setPizzaPictureLocation(String pizzaPictureLocation) {
+        this.pizzaPictureLocation = pizzaPictureLocation;
     }
 
     public void setName(String name) {
