@@ -3,6 +3,8 @@ package hr.unizd.springprojekt.PizzaPerfetta.create;
 import jakarta.validation.constraints.NotEmpty;
 
 public class PizzaCreateForm {
+    @NotEmpty(message = "Pizza must have picture")
+    private String pizzaPhotoLink;
     @NotEmpty(message = "Pizza must have name")
     private String name;
 
@@ -13,6 +15,13 @@ public class PizzaCreateForm {
         return name;
     }
 
+    public String getPizzaPhotoLink() {
+        return pizzaPhotoLink;
+    }
+
+    public void setPizzaPhotoLink(String pizzaPhotoLink) {
+        this.pizzaPhotoLink = pizzaPhotoLink;
+    }
 
     public void setName(String name) {
         this.name = name;

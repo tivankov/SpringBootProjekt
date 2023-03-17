@@ -39,6 +39,7 @@ public class PizzaServiceImpl implements PizzaService{
 
         Pizza pizza = new Pizza();
         pizza.setId(pizzaList.size() + 1);
+        pizza.setPizzaPictureLocation(pizzaCreateForm.getPizzaPhotoLink());
         pizza.setName(pizzaCreateForm.getName());
         pizza.setIngredients(pizzaCreateForm.getIngredients());
 
