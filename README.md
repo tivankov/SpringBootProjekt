@@ -1,2 +1,7 @@
 # SpringBootProjekt
-Prvi commit, odrađeno sve osim prikaza pizza na admin stranici
+---
+* Projekt kolegija: **Programiranje za web**
+* Tema: **Web menu za Pizzeriju**
+* Ime pizzerije: **Pizza Perfetta**
+---
+Projekt je u fazi izrade
