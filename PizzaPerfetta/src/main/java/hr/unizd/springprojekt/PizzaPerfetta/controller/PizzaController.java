@@ -64,7 +64,7 @@ public class PizzaController {
         return "pizzaEdit";
     }
 
-    @PostMapping("/pizza/edit")
+    @PostMapping("/pizzas/edit")
     public String edit(@ModelAttribute(name="pizza") @Valid PizzaEditForm pizza, BindingResult validationResult) {
         if (validationResult.hasErrors()) {
             return "pizzaEdit";
@@ -72,7 +72,7 @@ public class PizzaController {
 
         pizzaService.edit(pizza);
 
-        return "redirect:/pizzass";
+        return "redirect:/pizzas";
     }
 
     @GetMapping("/pizzas/delete/{id}")

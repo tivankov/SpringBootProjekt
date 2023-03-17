@@ -22,12 +22,11 @@
     </tr>
     </thead>
     <tr>
-        <form action="#" th:action="@{/pizzas/edit}" th:object="${piza}" method="post">
+        <form th:action="@{/pizzas/edit}" th:object="${pizza}" method="post">
             <input type="text" th:field="*{id}" hidden />
-<!-- Problem sa fieldsima           -->
             <td><input type="text" th:field="*{PizzaPictureLocation}" id="PizzaPhotoLink" class="form-control" required/></td>
-            <td><input type="text" th:field="*{PizzaName}" id="PizzaName" class="form-control" required/></td>
-            <td><input type="text" th:field="*{Ingredients}" id="Ingredients" class="form-control" required/></td>
+            <td><input type="text" th:field="*{name}" id="PizzaName" class="form-control" required/></td>
+            <td><input type="text" th:field="*{ingredients}" id="Ingredients" class="form-control" required/></td>
             <td><button type="submit" class="btn btn-primary btn-lg btn-block" style="color: white; background-color: green;">Submit</button>
                 <a href="/pizzas" class="btn btn-primary btn-lg btn-block" style="color: white; background-color: #6c757d;">Cancel</a></td>
         </form>
