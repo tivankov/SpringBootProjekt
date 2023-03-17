@@ -48,6 +48,8 @@ public class PizzaController {
     @PostMapping("/pizzas")
     public String create(@ModelAttribute(name = "pizza") @Valid PizzaCreateForm pizza, BindingResult validationInformation) {
         if (validationInformation.hasErrors()) {
+            System.out.println("errors");
+            validationInformation.getAllErrors().forEach(error -> System.out.println(error));
             return "pizzaCreate";
         }
         pizzaService.create(pizza);
